@@ -1,0 +1,17 @@
+.card-header {
+  background-color: #f5bd60;
+}
+input {
+  background-color: transparent;
+}
+input:focus {
+  outline: none !important;
+}
+.login-btn {
+  background-color: #f5bd60 !important;
+}
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
