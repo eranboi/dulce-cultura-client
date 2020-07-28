@@ -19,7 +19,9 @@ class HorizontalCard extends Component {
     return (
       <div className="item">
         <div className="ui small image">
-          <img src={`http://localhost:8000/${product.imageURL}`} />
+          <img
+            src={`https://vast-forest-19749.herokuapp.com/${product.imageURL}`}
+          />
         </div>
         <div className="content">
           <a className="header">{product.name}</a>

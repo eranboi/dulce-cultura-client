@@ -98,7 +98,7 @@ class NewProduct extends Component {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/products",
+        "https://vast-forest-19749.herokuapp.com/products",
         formData,
         {
           headers: {

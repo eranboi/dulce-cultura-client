@@ -46,7 +46,7 @@ class Card extends Component {
           )}
 
           <img
-            src={`http://localhost:8000/${this.props.images[0].imageURL}`}
+            src={`https://vast-forest-19749.herokuapp.com/${this.props.images[0].imageURL}`}
             alt={this.props.name}
           />
         </div>
@@ -61,11 +61,11 @@ class Card extends Component {
             <div className="ui teal ribbon label">Available</div>
           )}
           <img
-            src={`http://localhost:8000/${this.props.images[0].imageURL}`}
+            src={`https://vast-forest-19749.herokuapp.com/${this.props.images[0].imageURL}`}
             class="visible content"
           />
           <img
-            src={`http://localhost:8000/${this.props.images[1].imageURL}`}
+            src={`https://vast-forest-19749.herokuapp.com/${this.props.images[1].imageURL}`}
             class="hidden content"
           />
         </div>

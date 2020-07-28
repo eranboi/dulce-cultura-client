@@ -101,7 +101,9 @@ class EditProductCard extends Component {
     return (
       <div className="ui card">
         <div className="image">
-          <img src={`http://localhost:8000/${product.images[0].imageURL}`} />
+          <img
+            src={`https://vast-forest-19749.herokuapp.com/${product.images[0].imageURL}`}
+          />
         </div>
         <div className="content">
           {this.renderAvailability()}
