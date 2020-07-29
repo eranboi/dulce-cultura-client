@@ -4,6 +4,7 @@ import axios from "../api/axios";
 import { connect } from "react-redux";
 import { clearCart } from "../actions";
 import Alert from "./Alert";
+import "./CardElement.css";
 
 class CheckoutModal extends Component {
   state = {
@@ -115,6 +116,7 @@ class CheckoutModal extends Component {
             onChange={this.handleChange}
           />
           <button
+            className="checkout-button"
             disabled={
               this.state.processing ||
               this.state.disabled ||

@@ -43,7 +43,7 @@ class EditProduct extends Component {
 
     const token = user.token;
     const { name, description, price, category, type } = this.state;
-    const updates = { name, description, price, category, type };
+    const updates = { name, description, price: price * 100, category, type };
 
     try {
       if (!name || !description || !price || !category || !type)

@@ -102,7 +102,7 @@ class EditProductCard extends Component {
       <div className="ui card">
         <div className="image">
           <img
-            src={`https://vast-forest-19749.herokuapp.com/${product.images[0].imageURL}`}
+            src={`https://dulcecultura.s3.amazonaws.com/${product.images[0].imageURL}`}
           />
         </div>
         <div className="content">

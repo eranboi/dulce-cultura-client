@@ -28,7 +28,7 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter history={history}>
+      <HashRouter history={history}>
         <NavigationBar />
         <Switch>
           <Route path="/" exact component={HomePage} />
@@ -40,7 +40,7 @@ class App extends Component {
           <Route path="/products/:id" exact component={ProductPage} />
           <Route path="/edit/product/:id" exact component={EditProduct} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

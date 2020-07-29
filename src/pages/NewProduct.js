@@ -108,19 +108,26 @@ class NewProduct extends Component {
         }
       );
 
-      this.setState({
-        processing: false,
-        files: [],
-        previewUrl: [],
-        name: "",
-        details: "",
-        price: "",
-        category: "Merengues",
-        success: true,
-        error: null,
-      });
-    } catch (err) {
-      return this.setState({ error: err.response.data.error });
+      if (response.status === 201) {
+        this.setState({
+          processing: false,
+          files: [],
+          previewUrl: [],
+          name: "",
+          details: "",
+          price: "",
+          category: "Merengues",
+          success: true,
+          error: null,
+        });
+        swal("Success!", "Product uploaded", "success");
+      }
+    } catch (error) {
+      swal("Error!", this.state.error, "error");
+
+      console.log("Error here");
+      console.log(error);
+      return this.setState({ error: error.response.data.error });
     }
   };
 
@@ -157,8 +164,6 @@ class NewProduct extends Component {
   };
 
   renderForm = () => {
-    const { editorState } = this.state;
-
     return (
       <>
         <div className="images-list">
@@ -296,14 +301,6 @@ class NewProduct extends Component {
               >
                 Add a New Product
               </button>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              {this.state.error && swal("Error!", this.state.error, "error")}
-              {this.state.success &&
-                swal("Success!", "Product uploaded", "success")}
             </div>
           </div>
         </form>

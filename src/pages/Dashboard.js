@@ -42,6 +42,7 @@ class Dashboard extends Component {
         const user = JSON.parse(localStorage.getItem("user"));
         const token = user.token;
         this.fetchTheOrders();
+        this.fetchTheOrders_user();
 
         //Get all the products of a supplier
         try {
@@ -59,7 +60,7 @@ class Dashboard extends Component {
           });
           this.setState({ isReady: true });
         } catch (error) {
-          console.log(error);
+          console.log(error.message);
         }
       }
 
@@ -78,6 +79,8 @@ class Dashboard extends Component {
         this.setState({ isReady: true });
         const user = JSON.parse(localStorage.getItem("user"));
         const token = user.token;
+
+        // Get the pending supplier requests!
         try {
           const response = await axios.get("/users/pending", {
             headers: {
@@ -302,6 +305,7 @@ class Dashboard extends Component {
           {this.state.tab === "main" && this.renderOrdersForSupplier()}
           {this.state.tab === "products" && this.renderProductsForSupplier()}
           {this.state.tab === "newProduct" && <NewProduct />}
+          {this.state.tab === "myOrders" && this.renderOrdersForUser()}
         </div>
       );
     } else if (this.props.auth.user.user.status === "active") {
@@ -348,6 +352,7 @@ class Dashboard extends Component {
   renderForAdmin = () => {
     return (
       <div>
+        {this.state.tab === "myOrders" && this.renderOrdersForUser()}
         {this.state.tab === "products" && this.renderProductsForSupplier()}
         {this.state.tab === "supplierRequests" && this.renderRequestsForAdmin()}
         {this.state.tab === "newProduct" && <NewProduct />}
@@ -369,7 +374,7 @@ class Dashboard extends Component {
       let shipped = false;
 
       return (
-        <table className="ui red celled table">
+        <table className="ui celled table">
           <thead>
             <tr>
               <th>Product Name</th>

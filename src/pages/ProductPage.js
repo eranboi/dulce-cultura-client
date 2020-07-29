@@ -56,7 +56,7 @@ class ProductPage extends Component {
     return (
       <div className="ui fluid image">
         <img
-          src={`https://vast-forest-19749.herokuapp.com/${this.state.product.images[0].imageURL}`}
+          src={`https://dulcecultura.s3.amazonaws.com/${this.state.product.images[0].imageURL}`}
           alt=""
         />
       </div>

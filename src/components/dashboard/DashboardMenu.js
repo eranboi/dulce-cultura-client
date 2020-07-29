@@ -25,6 +25,14 @@ class DashboardMenu extends Component {
         <a
           className="item"
           onClick={() => {
+            this.props.onTabClick("myOrders");
+          }}
+        >
+          My Orders
+        </a>
+        <a
+          className="item"
+          onClick={() => {
             this.props.onTabClick("products");
           }}
         >
@@ -68,6 +76,14 @@ class DashboardMenu extends Component {
           }}
         >
           Orders
+        </a>
+        <a
+          className="item"
+          onClick={() => {
+            this.props.onTabClick("myOrders");
+          }}
+        >
+          My Orders
         </a>
         <a
           className="item"

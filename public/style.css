@@ -13,43 +13,6 @@ b {
 #customFile {
   z-index: 0 !important;
 }
-/* #modal {
-  z-index: 1000 !important;
-  height: 100vh;
-  position: absolute;
-  width: 100vw;
-  top: 0;
-  left: 0;
-} 
-.loading-modal {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
+.ui.dimmer {
+  position: fixed !important;
 }
-
-.checkout-modal #payment-form {
-  z-index: 2000;
-  width: 100%;
-}
-.checkout-modal .row {
-  z-index: 1002;
-}
-.closeBtn {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  font-size: 32px;
-}
-.closeBtn:hover {
-  cursor: pointer;
-}
-
-#root {
-  min-height: 100vh;
-  width: 100vw;
-}*/
