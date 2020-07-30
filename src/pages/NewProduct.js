@@ -288,9 +288,9 @@ class NewProduct extends Component {
               </select>
             </div>
 
-            <div className="col-xs-6 col-sm-6 col-md-6">
+            <div className="col-xs-12 col-sm-12 col-md-6">
               <button
-                className="btn btn-secondary mt-3"
+                className="ui basic button orange mt-3"
                 onClick={this.postProduct}
               >
                 Add a New Product

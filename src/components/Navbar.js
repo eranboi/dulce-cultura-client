@@ -137,7 +137,7 @@ class Navbar extends Component {
     const { isSignedIn, user } = this.props.auth;
     return (
       <nav
-        className="navbar navbar-expand-md fixed-top navbar-light bg-light"
+        className="navbar navbar-expand-md fixed-top navbar-dark bg-light"
         style={{ zIndex: "100!important" }}
       >
         <div className="container-bs">

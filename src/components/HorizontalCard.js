@@ -39,7 +39,7 @@ class HorizontalCard extends Component {
               <i className="right chevron icon"></i>
             </div>
             <div className="ui label">{this.props.product.quantity}</div>
-            <div className="ui label">MXN {this.props.product.price / 100}</div>
+            <div className="ui label">MXN {this.props.product.price}</div>
           </div>
         </div>
       </div>
