@@ -59,8 +59,8 @@ class Homepage extends Component {
       <div className="featured-main">
         <img
           className="ui fluid image"
-          src={require("../img/featured-1.png")}
-          alt=""
+          /* src={require("../img/featured-1.png")} */
+          alt=" Featured image "
         />
         <div className="featured-overlay">
           <div className="featured-name">
@@ -77,7 +77,7 @@ class Homepage extends Component {
   renderMenu = () => {
     return (
       <div className="ui container mt-5">
-        <div class="ui grey inverted three item menu">
+        <div class="ui orange inverted three item menu">
           <a
             class="item"
             onClick={() => {

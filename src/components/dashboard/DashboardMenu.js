@@ -13,7 +13,7 @@ class DashboardMenu extends Component {
 
   renderMenu_supplier = () => {
     return (
-      <div className="ui menu">
+      <div className="ui menu inverted orange">
         <a
           className="item"
           onClick={() => {
@@ -52,7 +52,7 @@ class DashboardMenu extends Component {
 
   renderMenu_user = () => {
     return (
-      <div className="ui menu">
+      <div className="ui menu inverted orange">
         <a className="item">My Orders</a>
       </div>
     );
@@ -60,7 +60,7 @@ class DashboardMenu extends Component {
 
   renderMenu_admin = () => {
     return (
-      <div className="ui stackable menu">
+      <div className="ui stackable menu inverted orange">
         <a
           className="item"
           onClick={() => {

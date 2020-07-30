@@ -142,7 +142,11 @@ class Navbar extends Component {
       >
         <div className="container-bs">
           <Link className="navbar-brand" to="/">
-            Shop
+            <img
+              className="img-fluid"
+              style={{ maxHeight: "50px" }}
+              src={require("../img/logo.jpeg")}
+            />
           </Link>
 
           <button

@@ -76,13 +76,6 @@ class NewProduct extends Component {
     ) {
       return this.setState({
         error: "Please fill all the fields",
-        files: [],
-        previewUrl: [],
-        name: "",
-        details: "",
-        price: "",
-        category: "",
-        type: "",
       });
     }
 
@@ -119,6 +112,7 @@ class NewProduct extends Component {
           category: "Merengues",
           success: true,
           error: null,
+          isValid: false,
         });
         swal("Success!", "Product uploaded", "success");
       }
@@ -154,7 +148,7 @@ class NewProduct extends Component {
 
       const filesLen = uploadedFiles.length;
 
-      if (filesLen > 3) {
+      if (filesLen > 2) {
         return this.setState({
           error: "You can't upload more than 3 images per product.",
         });
